@@ -73,6 +73,7 @@ namespace Catalog.API.Controllers
         /// Remove um produto do catálogo
         /// </summary>
         /// <param name="sku">SKU do produto</param>
+        [Route("api/product/{sku}")]
         public void Delete(string sku)
         {
             this.ProductApplicationService.Remove(sku);
